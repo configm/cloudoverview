@@ -1,0 +1,12 @@
+{% extends "pearsons.html" %}
+{% block main_bo %}
+
+
+<a href="/new_{{ type_obj }}s"> Create a new {{ type_obj }} </a>
+{% for Obj in Obj_list %}
+<br>
+<a href="/load_{{ type_obj }}s/{{ obj }}"> {{ obj }} </a>
+
+{% endfor %}
+
+{% endblock %}

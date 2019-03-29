@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/static/styles/main.css" type="text/css">
+    <link rel="icon" href="/static/favicon.ico">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Baboon!</title>
+    <div class="logop"><a href="/"><img alt="Pearson" height="40" src="/static/pearsonLogo.png" width="133"></img></a></div>
+</head>
+<body>
+<div class="secondary-nav-menu">
+<div class="menu"><a href="/projects">Projects</a></div>
+<div class="menu"><a href="/pods">Pods</a></div>
+<div class="menu"><a href="/jenkins">Jenkins</a></div>
+<div class="menu"><a href="/addcloudmapper">Add Cloudmapper</a></div>
+<div class="menu"><a href="/pearson-associate.html">DB's</a></div>
+</div>
+<div class="bafer_left_body">
+<br>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <ul class=flashes>
+      <li>Go Bananas .. !!!</li>
+    </ul>
+    <br>
+    {% block main_bo %}
+
+
+    {% endblock %}
+    </div>
+</body>
+</html>

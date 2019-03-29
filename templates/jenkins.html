@@ -1,0 +1,20 @@
+{% extends "pearsons.html" %}
+{% block main_bo %}
+
+
+<a href="/new_jenkins"> Create a new jenkins </a>
+{% for jenkins in jenkins_list %}
+<br>
+<a href="/load_jenkins/{{ jenkins }}"> {{ jenkins }} </a>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+{% endblock %}

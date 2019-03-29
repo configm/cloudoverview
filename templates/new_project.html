@@ -1,0 +1,17 @@
+{% extends "pearsons.html" %}
+{% block main_bo %}
+
+<form action="/crete_project" method="POST" id="new_project" >
+  <div class="fild_container"><div class="lable-text"> project_name: </div> <input type="text" name="pname"></div>
+   <div class="fild_container"><div class="lable-text">VCS:</div>
+    <select name="vcs_type" form="new_project">
+    <option value="GIT">GIT</option>
+    <option value="Bitbucket" >Bitbucket</option>
+    <option value="ClearCase">ClearCase</option>
+    <option value="SVN">SVN</option>
+    </select></div>
+      <div class="fild_container"><div class="lable-text"> VCS Path : </div> <input type="text" name="vcs_path" size="120"></div>
+    <button type="submit" value="Submit">Submit</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "pearsons.html" %}
+{% block main_bo %}
+
+
+<a href="/new_pods"> Create a new pods </a>
+{% for pods in pods_list %}
+<br>
+<a href="/load_pods/{{ pods }}"> {{ pods }} </a>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+{% endblock %}

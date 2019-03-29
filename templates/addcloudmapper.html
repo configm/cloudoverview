@@ -1,0 +1,29 @@
+{% extends "pearsons.html" %}
+{% block main_bo %}
+
+<form action="/starttocolectcloudmapper" method="POST" id="starttocolectcloudmapper" >
+  <div class="fild_container"><div class="lable-text"> project_name: </div> <input type="text" placeholder="E.g Anaconda" name="pname"></div>
+  <div class="fild_container"><div class="lable-text"> Account Id: </div> <input type="text" size="70" placeholder="E.g 1236787990" name="accountid"></div>
+  <div class="fild_container"><div class="lable-text"> Account Name: </div> <input type="text" size="70"  placeholder="E.g joe.toui@pearson.com" name="accountname"></div>
+  <div class="fild_container"><div class="lable-text"> Access key ID: </div> <input type="text" size="70" placeholder="E.g AKIAJ3WOFXRZJGYSBKXA" name="accesskeyid"></div>
+  <div class="fild_container"><div class="lable-text"> Access key Secret: </div> <input type="password" size="70"  placeholder="E.g xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" name="accesskeysecret"></div>
+
+    <div class="fild_container"><div class="lable-text"> filters : </div> <textarea    title="    There are a number of filtering options that can be applied here to reduce the number of nodes and edges.<br>
+      This will help the diagram look better, by removing some of its complexity, and is also needed for large environments that will not render.<br>
+      The most useful filtering options:<br>
+
+--regions: Restrict the diagram to a set regions, ex. us-east-1,us-east-2<br>
+--vpc-ids and --vpc-names: Restrict the diagram to a set of VPCs.<br>
+--collapse-by-tag: This is very useful to provide a tag name, and all nodes with that tag will be reduced to a single displayed node.<br>
+The other filtering options are:<br>
+
+--internal-edges (default) and --no-internal-edges: When you only care about showing what is publicly accessible, use --no-internal-edges.<br>
+--inter-rds-edges and --no-inter-rds-edges (default): By default, any communication paths between RDS nodes are not shown, as this is unlikely to be of interest.<br> To display them, use --inter-rds-edges.<br>
+--read-replicas (default) and --no-read-replicas: By default, RDS read replica nodes are shown. You can ignore them by using --no-read-replicas.<br>
+--azs (default) and --no-azs: Availability zones are shown by default. To ignore them, use --no-azs.<br>
+      --no-collapse-asgs: By default, auto-scaling groups are collapsed to a single node. This flag causes all instances to be shown instead." placeholder="E.g --regions ca-central-1 --vpc-ids vpc-0718f354069329049 ..." name="accesskeysecret" cols="80" rows="5" ></textarea></div>
+
+    <button type="submit" value="Submit">Submit</button>
+</form>
+
+{% endblock %}

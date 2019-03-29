@@ -1,0 +1,30 @@
+
+
+{% for component_type in option_list %}
+<div id="{{ component_type }}">
+  <form action="/add_comp_to_project/{{ component_type }}/component_type" method="post">
+    <input type="text" name="component_type" id="component_type" value=""><br>
+    <input type="submit" value="add {{ component_type }}">
+  </form>
+  {% for  obj_type_in_project in option_selection_list %}
+
+  {% endfor %}
+  <hr>
+</div>
+{% endfor %}
+
+
+
+<form  action="/create_new_project" method="POST">
+  <input type="text" name="project_name" id="project_name" value=""><br>
+  <input type="submit" value="create">
+</form>
+
+<form  action="/open_project" method="POST">
+    <select name="project_name">
+        {% for project in projects_list %}
+          <option value="{{ project }}">{{ project }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Open">
+</form>

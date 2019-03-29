@@ -1,0 +1,12 @@
+{% extends "pearsons.html" %}
+{% block main_bo %}
+
+
+<a href="/new_project"> Create a new project </a>
+{% for project in projects_list %}
+<br>
+<a href="/load_project/{{ project }}"> {{ project }} </a>
+
+{% endfor %}
+
+{% endblock %}

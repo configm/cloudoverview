@@ -85,6 +85,5 @@ apt-get  install -y  curl
 apt-get install -y cri-o-1.11
 
 
-
 kubeadm init
 

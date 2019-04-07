@@ -21,7 +21,7 @@ sudo sh -c 'echo deb http://apt.kubernetes.io/ kubernetes-xenial main > /etc/apt
 chmod 644 /etc/apt/sources.list
  apt-get -y update
  apt-get install -y kubelet kubeadm kubectl kubernetes-cni
-
+ apt-get install -y openjdk-8-jdk openjdk-8-jre
  apt-get -y install jenkins
 
 cat /etc/default/jenkins |  sed -e "s/HTTP_PORT=8080/HTTP_PORT=666/" > /tmp/jenkins
